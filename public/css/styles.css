@@ -1,0 +1,417 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: url('../images/imagebg.jpeg') no-repeat center center fixed;
+    /* Background image */
+    background-size: cover;
+    /* Ensures the image covers the entire screen without distortion */
+    background-position: center center;
+    /* Centers the image */
+    background-attachment: fixed;
+    /* Keeps the image fixed while scrolling */
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    z-index: 2;
+}
+
+.neon-text {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+    /* Stylish font */
+    color: #fcb251;
+    /* Purple color for the text */
+    text-shadow:
+        0 0 5px #fcb251,
+        0 0 10px #fcb251,
+        0 0 20px #fcb251,
+        0 0 40px #ffc880,
+        0 0 80px #ffc880,
+        0 0 90px #ffc880;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0% {
+        text-shadow: 0 0 5px #fcb251, 0 0 10px #fcb251;
+    }
+
+    50% {
+        text-shadow: 0 0 30px #ffc880, 0 0 60px #ffc880;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #fcb251, 0 0 40px #fcb251;
+    }
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #d9d9d9;
+    margin-top: 5px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparent white background */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    border-radius: 15px;
+    /* Rounded corners */
+    padding: 20px;
+    width: 300px;
+    /* Card width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow */
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    /* Darker shadow on hover */
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffc880;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #eaeaea;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+/* Centered Card Styles */
+.centered-card {
+    text-align: center;
+    /* Center text inside the card */
+    background: rgba(0, 0, 0, 0.6);
+    /* Transparent background */
+    padding: 20px;
+    /* Add padding for spacing */
+    margin: auto;
+    /* Horizontally center the card */
+    border-radius: 15px;
+    /* Rounded corners */
+    max-width: 500px;
+    /* Limit the width of the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow for depth */
+    position: absolute;
+    /* Position the card for vertical centering */
+    top: 50%;
+    /* Vertically center the card */
+    left: 50%;
+    /* Horizontally center the card */
+    transform: translate(-50%, -50%);
+    /* Adjust for the card's dimensions */
+}
+
+.experience-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.experience-card {
+    width: 48%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.scrollable-card {
+    overflow-y: auto;
+    /* Makes the card content scrollable */
+}
+
+.experience-details {
+    margin-bottom: 20px;
+}
+
+.experience-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.experience-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-details ul li {
+    margin: 5px 0;
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    /* Enable side-by-side alignment */
+    flex-wrap: nowrap;
+    /* Prevent wrapping of cards */
+    gap: 20px;
+    /* Space between cards */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    padding: 20px;
+    margin: 50px auto;
+    /* Adjust the margin from the top */
+    max-height: 80vh;
+    /* Limit the overall container height */
+    align-items: flex-start;
+    /* Align cards at the top */
+}
+
+/* Scrollbar Styling for Horizontal Scroll */
+.projects-container::-webkit-scrollbar {
+    height: 10px;
+    /* Horizontal scrollbar height */
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    /* Scrollbar thumb color */
+    border-radius: 5px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    /* Scrollbar track color */
+}
+
+/* Individual Project Card */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 12px;
+    flex: 0 0 45%;
+    /* Each card takes 45% of the container width */
+    max-width: 45%;
+    /* Limit the width to 45% */
+    max-height: 70vh;
+    /* Limit the vertical height for scrollability */
+    overflow-y: auto;
+    /* Enable vertical scrolling for the card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* Scrollbar Styling for Vertical Scroll */
+.project-card::-webkit-scrollbar {
+    width: 8px;
+    /* Vertical scrollbar width */
+}
+
+.project-card::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    /* Scrollbar thumb color */
+    border-radius: 5px;
+}
+
+.project-card::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    /* Scrollbar track color */
+}
+
+/* Project Title */
+.project-card h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Role or Award */
+.project-card .role {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Project Details */
+.project-details ul {
+    font-size: 0.9rem;
+    color: #f4f4f4;
+    line-height: 1.5;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-wrap: wrap;
+        /* Stack cards on smaller screens */
+        overflow-x: hidden;
+        /* Remove horizontal scrolling on small screens */
+    }
+
+    .project-card {
+        flex: 0 0 100%;
+        /* Cards take full width on smaller screens */
+        max-width: 100%;
+    }
+}
+
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Add a subtle white background on hover */
+    color: #fcb251;
+    /* Change text color to a highlight */
+    border-color: #fcb251;
+    /* Change border color to a highlight */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow cards to wrap to the next row */
+    justify-content: center;
+    /* Center-align the cards */
+    gap: 20px;
+    /* Space between cards */
+    padding: 20px;
+    margin-top: 80px;
+    /* Increased margin to push the container down from the top */
+    padding-bottom: 50px;
+    /* Ensure there's space at the bottom */
+    overflow-y: auto;
+    /* Makes the container scrollable */
+    height: calc(100vh - 200px)
+}
+
+.skill-card {
+    background: rgba(0, 0, 0, 0.6);
+    /* Transparent dark background */
+    color: #fff;
+    /* White text */
+    border-radius: 10px;
+    /* Rounded edges */
+    padding: 10px 15px;
+    /* Inner padding */
+    width: 250px;
+    /* Fixed card width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Hover animation */
+    text-align: center;
+    /* Center-align text */
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    /* Lift the card on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    /* Stronger shadow on hover */
+}
+
+.skill-title {
+    font-size: 18px;
+    /* Title font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* Space below the title */
+    text-transform: uppercase;
+    /* Make the title uppercase */
+    color: #fa7305;
+    /* Highlight color */
+}
+
+.skill-list {
+    list-style: none;
+    /* Remove bullet points */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+}
+
+.skill-item {
+    margin: 5px 0;
+    /* Space between items */
+    font-size: 14px;
+    /* Slightly smaller text */
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    background-color: #ddd;
+    /* Light grey background */
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Progress Fill (starts at 0% width for animation) */
+.progress-fill {
+    background-color: #ffc880;
+    /* Purple color for the bar */
+    height: 100%;
+    width: 0;
+    /* Initial width */
+    border-radius: 10px 0 0 10px;
+    transition: width 1.5s ease-in-out;
+    /* Smooth animation */
+}
+
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black for better contrast */
+    padding: 5px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8rem;
+}

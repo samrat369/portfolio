@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Skills</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Skills Section -->
+    <div class="skills-container">
+        <!-- Programming Skills -->
+        <div class="skill-card">
+            <div class="skill-title">Programming</div>
+            <ul class="skill-list">
+                <li class="skill-item">Python
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="90"></div>
+                    </div>
+                </li>
+                <li class="skill-item">JavaScript
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="75"></div>
+                    </div>
+                </li>
+                <li class="skill-item">Java
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="60"></div>
+                    </div>
+                </li>
+                <li class="skill-item">HTML
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="65"></div>
+                    </div>
+                </li>
+                <li class="skill-item">CSS
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="65"></div>
+                    </div>
+                </li>
+                <li class="skill-item">CSS
+                    <p>🔹 Completed <span class="highlight">450+</span> problems on <span
+                            class="highlight">LeetCode</span> with a 150+ daily streak.</p>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Tools Skills -->
+        <div class="skill-card">
+            <div class="skill-title">ITSM and CI/CD Tools</div>
+            <ul class="skill-list">
+                <li class="skill-item">ServiceNow
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="75"></div>
+                    </div>
+                </li>
+                <li class="skill-item">Jenkins
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="60"></div>
+                    </div>
+                </li>
+                <li class="skill-item">GitHub Actions
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="70"></div>
+                    </div>
+                </li>
+                <li class="skill-item">GitLab
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="70"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Frameworks Skills -->
+        <div class="skill-card">
+            <div class="skill-title">Frameworks</div>
+            <ul class="skill-list">
+                <li class="skill-item">Django
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="70"></div>
+                    </div>
+                </li>
+                <li class="skill-item">Node.js
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="60"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <div class="skill-title">Machine Learning & AI</div>
+            <ul class="skill-list">
+                <li class="skill-item">TensorFlow
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="80"></div>
+                    </div>
+                </li>
+                <li class="skill-item">Statistical Machine learning
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="75"></div>
+                    </div>
+                </li>
+                <li class="skill-item">Scikit-learn
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="70"></div>
+                    </div>
+                </li>
+                <li class="skill-item">Keras
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="65"></div>
+                    </div>
+                </li>
+                <li class="skill-item">NLP (Natural Language Processing)
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="70"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <div class="skill-title">Others</div>
+            <ul class="skill-list">
+                <li class="skill-item">IAM methodologies
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="80"></div>
+                    </div>
+                </li>
+                <li class="skill-item">Interpersonal Skills
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="90"></div>
+                    </div>
+                </li>
+                <li class="skill-item">Linux
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="70"></div>
+                    </div>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- Back Button -->
+    <a href="/" class="back-button">Back to Home</a>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Samrat Lahiri</p>
+    </footer>
+
+    <!-- JavaScript for Progress Bars -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const progressFills = document.querySelectorAll(".progress-fill");
+
+            progressFills.forEach((fill) => {
+                const width = fill.getAttribute("data-width");
+                fill.style.transition = "width 1.5s ease-in-out";
+                setTimeout(() => {
+                    fill.style.width = width + "%";
+                }, 200); // Slight delay for smooth animation
+            });
+        });
+    </script>
+</body>
+
+</html>
