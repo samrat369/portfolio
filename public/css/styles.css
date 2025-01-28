@@ -134,6 +134,8 @@ body {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom:10px;
 }
 
 .experience-card {
@@ -148,6 +150,13 @@ body {
 
 .scrollable-card {
     overflow-y: auto;
+    width: 48%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 500px;
     /* Makes the card content scrollable */
 }
 
@@ -168,6 +177,24 @@ body {
 .experience-details ul li {
     margin: 5px 0;
 }
+
+/* Scrollbar Styling for Vertical Scroll */
+.scrollable-card::-webkit-scrollbar {
+    width: 8px;
+    /* Vertical scrollbar width */
+}
+
+.scrollable-card::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    /* Scrollbar thumb color */
+    border-radius: 5px;
+}
+
+.scrollable-card::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    /* Scrollbar track color */
+}
+
 
 /* Projects Section */
 .projects-container {
@@ -275,6 +302,18 @@ body {
     }
 
     .project-card {
+        flex: 0 0 100%;
+        /* Cards take full width on smaller screens */
+        max-width: 100%;
+    }
+     .experience-container {
+        flex-wrap: wrap;
+        /* Stack cards on smaller screens */
+        overflow-x: hidden;
+        /* Remove horizontal scrolling on small screens */
+    }
+
+    .scrollable-card {
         flex: 0 0 100%;
         /* Cards take full width on smaller screens */
         max-width: 100%;
