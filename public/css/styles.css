@@ -130,52 +130,40 @@ body {
     /* Adjust for the card's dimensions */
 }
 
+/* Experience Section */
 .experience-container {
     display: flex;
+    /* Enable side-by-side alignment */
+    flex-wrap: nowrap;
+    /* Prevent wrapping of cards */
     gap: 20px;
-    justify-content: space-between;
-    margin-top: 60px;
-    margin-bottom:10px;
+    /* Space between cards */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    padding: 20px;
+    margin: 50px auto;
+    max-height: 80vh;
+    align-items: flex-start;
+    /* Align cards at the top */
 }
 
-.experience-card {
-    width: 48%;
-    border: 1px solid #ccc;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    overflow: hidden;
-    max-height: 500px;
-}
-
+/* Individual Scrollable Card */
 .scrollable-card {
-    overflow-y: auto;
-    width: 48%;
-    border: 1px solid #ccc;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparent white background */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%;
+    /* Card width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: left;
     max-height: 500px;
-    /* Makes the card content scrollable */
-}
-
-.experience-details {
-    margin-bottom: 20px;
-}
-
-.experience-details h3 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.experience-details ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.experience-details ul li {
-    margin: 5px 0;
+    /* Limit the height for scrolling */
+    overflow-y: auto;
+    /* Make the card content scrollable */
 }
 
 /* Scrollbar Styling for Vertical Scroll */
@@ -193,6 +181,22 @@ body {
 .scrollable-card::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
     /* Scrollbar track color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-wrap: wrap;
+        /* Stack cards on smaller screens */
+        overflow-x: hidden;
+        /* Remove horizontal scrolling on small screens */
+    }
+
+    .scrollable-card {
+        flex: 0 0 100%;
+        /* Cards take full width on smaller screens */
+        max-width: 100%;
+    }
 }
 
 
@@ -302,18 +306,6 @@ body {
     }
 
     .project-card {
-        flex: 0 0 100%;
-        /* Cards take full width on smaller screens */
-        max-width: 100%;
-    }
-     .experience-container {
-        flex-wrap: wrap;
-        /* Stack cards on smaller screens */
-        overflow-x: hidden;
-        /* Remove horizontal scrolling on small screens */
-    }
-
-    .scrollable-card {
         flex: 0 0 100%;
         /* Cards take full width on smaller screens */
         max-width: 100%;
