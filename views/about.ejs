@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px;
+            color: white;
+            max-width: 900px;
+            margin: auto;
+        }
+        
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .summary {
+            max-width: 500px;
+            text-align: left;
+        }
+        
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about-container">
+        <img src="/images/profile.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="summary">
+            <h1>About Me</h1>
+            <p>I am a highly motivated software engineer with expertise in IAM (Identity and Access Management), AI/ML, and DevOps. With experience in migrating IAM applications, designing automation frameworks, and working with technologies like ServiceNow, GitHub Actions, and Python, I strive to create seamless and efficient solutions.</p>
+            <p>My passion for problem-solving, data-driven decision-making, and continuous learning drives me to explore emerging technologies. I have a proven track record in designing IAM workflows, automating access management, and optimizing authentication protocols.</p>
+        </div>
+    </div>
+    <a href="/" class="back-button">Back to Home</a>
+</body>
+
+</html>
